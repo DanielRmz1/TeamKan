@@ -65,6 +65,12 @@ namespace TeamKanBan.Models
     public class RegisterViewModel
     {
         [Required]
+        public string Nombre { get; set; }
+
+        [Required]
+        public string Apellido { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }
