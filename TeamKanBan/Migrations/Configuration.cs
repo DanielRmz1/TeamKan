@@ -10,6 +10,7 @@ namespace TeamKanBan.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(TeamKanBan.Models.ApplicationDbContext context)

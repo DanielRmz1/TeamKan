@@ -1,3 +1,4 @@
 .vs/
 TeamKanBan/bin/
 TeamKanBan/obj/
+*.csproj

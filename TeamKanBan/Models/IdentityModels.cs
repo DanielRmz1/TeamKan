@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using TeamKanBan.Models.MyModels;
 
 namespace TeamKanBan.Models
 {
@@ -29,10 +30,17 @@ namespace TeamKanBan.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<ProjectActivitiesModel> ProjectActivities { get; set; }
+        public DbSet<ProjectModel> Projects { get; set; }
+        public DbSet<TeamModel> Teams { get; set; }
+        public DbSet<UsersActivitiesModel> UsersActivities { get; set; }
+        public DbSet<UsersProjectsLogModel> UserLogs { get; set; }
+        public DbSet<UsersProjectsModel> UsersProjects { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            
+
         }
 
         public static ApplicationDbContext Create()

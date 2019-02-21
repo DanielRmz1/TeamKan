@@ -183,6 +183,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MyModels\ProjectModel.cs" />
+    <Compile Include="Models\MyModels\ProjectActivitiesModel.cs" />
+    <Compile Include="Models\MyModels\TeamModel.cs" />
+    <Compile Include="Models\MyModels\UsersActivitiesModel.cs" />
+    <Compile Include="Models\MyModels\UsersProjectsLogModel.cs" />
+    <Compile Include="Models\MyModels\UsersProjectsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -245,7 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\MyModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

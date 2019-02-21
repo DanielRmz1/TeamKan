@@ -1,20 +1,15 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace TeamKanBan.Models.MyModels
 {
-    public class ProjectModel
+    public class ProjectActivitiesModel
     {
         public int Id { get; set; }
-
-        [StringLength(100)]
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Repository { get; set; }
         public string State { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ApplicationUser Owner { get; set; }
-        public TeamModel Team { get; set; }
+        public ProjectModel Project { get; set; }
     }
 }
