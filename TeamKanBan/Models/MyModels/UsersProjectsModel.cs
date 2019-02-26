@@ -1,4 +1,6 @@
-﻿namespace TeamKanBan.Models.MyModels
+﻿using System.Collections.Generic;
+
+namespace TeamKanBan.Models.MyModels
 {
     public class UsersProjectsModel
     {
