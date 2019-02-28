@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TeamKanBan.Models.MyModels
@@ -16,7 +17,7 @@ namespace TeamKanBan.Models.MyModels
         public string State { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ApplicationUser Owner { get; set; }
+        public List<ApplicationUser> Owner { get; set; }
         public TeamModel Team { get; set; }
     }
 }

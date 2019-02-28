@@ -43,6 +43,19 @@ namespace TeamKanBan.Models
 
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProjectModel>().HasRequired(x => x.Team);
+            modelBuilder.Entity<UsersProjectsLogModel>().HasRequired(x => x.Log);
+            modelBuilder.Entity<UsersProjectsModel>().HasRequired(x => x.Project);
+            modelBuilder.Entity<UsersProjectsModel>().HasRequired(x => x.User);
+            modelBuilder.Entity<ProjectActivitiesModel>().HasRequired(x => x.Project);
+            modelBuilder.Entity<UsersActivitiesModel>().HasRequired(x => x.User);
+            modelBuilder.Entity<UsersActivitiesModel>().HasRequired(x => x.ProjectActivities);
+            modelBuilder.Entity<ProjectModel>().HasRequired(x => x.Owner);
+            base.OnModelCreating(modelBuilder);
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
